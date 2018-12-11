@@ -1,4 +1,4 @@
-f = open('Day3P1.txt', 'r')
+f = open('claims.txt', 'r')
 content = [x for x in f.readlines()]
 f.close()
 
@@ -19,15 +19,10 @@ for c in content:
             claims[i][j] = claims[i][j] + 1
 
 inches = 0
-f = open('result.txt', 'w+')
 for i in range(0, 1100):
-    if i > 0:
-        f.write('\n')
     for j in range(0, 1100):
-        f.write(str(claims[i][j]) + ' ')
         if claims[i][j] > 1:
             inches += 1
-f.close()
 
 print(inches)
 
